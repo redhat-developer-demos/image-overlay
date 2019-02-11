@@ -44,6 +44,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class ImageOverlayApplication {
 
+  @CrossOrigin
   @RestController
   class ImageOverlayController {
 
@@ -71,7 +72,6 @@ public class ImageOverlayApplication {
     
     @PostMapping(path = "/overlayImage", consumes = "application/json",
                  produces = "application/json")
-    @CrossOrigin
     public Image incomingImage(@RequestBody Image image)
       throws IOException {
       
@@ -83,8 +83,7 @@ public class ImageOverlayApplication {
              dateFormatString = image.getDateFormatString(), 
              overlaidImageData = "";
 
-      System.out.println("STDOUT - just invoked the overlayImage endpoint.");
-      System.err.println("STDERR - just invoked the overlayImage endpoint.");
+      System.out.println("V0.6 - Added allowed headers");
 
       // Decode the image data and read it with the ImageIO class
       BufferedImage baseImage =
