@@ -187,7 +187,7 @@ public class ImageOverlayApplication {
       canvas.setColor(Color.WHITE);
       canvas.drawString(dateString, centerX, centerY);
 
-      // Now its time to create the image in memory and encode
+      // Now it's time to create the image in memory and encode
       // it to base64
       ByteArrayOutputStream overlaidImage = new ByteArrayOutputStream();
       ImageIO.write(targetImage, imageType, overlaidImage);
