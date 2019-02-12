@@ -39,17 +39,20 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin
 @SpringBootApplication
 public class ImageOverlayApplication {
 
-  @CrossOrigin
+  @CrossOrigin(origins = "*")
   @RestController
   class ImageOverlayController {
 
   /**
-   * This handles PATH calls to the /overlayImage endpoint. JSON in,
+   * This handles POST calls to the /overlayImage endpoint. JSON in,
    * JSON out. Notice that the code uses the Jackson JSON utilities...
    * the signature of the method is that it it receives an Image object
    * and returns an Image object. Jackson automatically handles the
@@ -69,7 +72,13 @@ public class ImageOverlayApplication {
    * @exception Throws IOException if anything goes wrong with the files
    *
   */
-    
+
+      @CrossOrigin(origins = "*")
+      @RequestMapping(path = "/overlayImage", method = RequestMethod.OPTIONS)
+      public void methodName() {
+          System.out.println("OPTIONS!");
+      } 
+      
     @PostMapping(path = "/overlayImage", consumes = "application/json",
                  produces = "application/json")
     public Image incomingImage(@RequestBody Image image)
@@ -83,7 +92,8 @@ public class ImageOverlayApplication {
              dateFormatString = image.getDateFormatString(), 
              overlaidImageData = "";
 
-      System.out.println("V0.6 - Added allowed headers");
+      // Leaving this here for the pod log in the OpenShift console
+      System.out.println("Transforming the image");
 
       // Decode the image data and read it with the ImageIO class
       BufferedImage baseImage =
@@ -199,4 +209,3 @@ public class ImageOverlayApplication {
     SpringApplication.run(ImageOverlayApplication.class, args);
   }
 }
-
