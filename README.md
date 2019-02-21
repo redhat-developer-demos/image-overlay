@@ -9,7 +9,9 @@ The Knative serverless environment lets you deploy code to Kubernetes, but no re
 
 **IMPORTANT LINKS**
 
-:notebook: [Knative Tutorial](https://redhat-developer-demos.github.io/knative-tutorial/knative-tutorial/dev/index.html)
+:notebook: [Knative Tutorial Docs](https://redhat-developer-demos.github.io/knative-tutorial/knative-tutorial/dev/index.html)
+
+:gift: [Knative Tutorial repo](https://bit.ly/knative-tutorial)
 
 :gift: [GitHub repo - Image overlay](https://github.com/redhat-developer-demos/image-overlay)
 
