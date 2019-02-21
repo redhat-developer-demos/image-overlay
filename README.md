@@ -20,7 +20,11 @@ The Knative serverless environment lets you deploy code to Kubernetes, but no re
 :package: [Docker image](https://cloud.docker.com/repository/docker/dougtidwell/imageoverlay)
 
 :clapper: [VIDEO: Serverless Computing Tutorial - Introduction (Part 1)](https://youtu.be/R8PGrhfVWTc)
-:clapper: [VIDEO: Serverless Computing Tutorial - The Service (Part 2)] (https://youtu.be/M_Xse7vjkvE)
+
+:clapper: [VIDEO: Serverless Computing Tutorial - The Service (Part 2)](https://youtu.be/M_Xse7vjkvE)
+
 :clapper: [VIDEO: Serverless Computing Tutorial - Deploying to Knative (Part 3)](https://youtu.be/AR4fqwFLn9I)
+
+***
 
 Coderland :roller_coaster::rocket::ferris_wheel: is a place for learning, brought to you by the [Red Hat Developer](https://developers.redhat.com) program.
