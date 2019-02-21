@@ -3,7 +3,7 @@
 Given an image, this code superimposes the Coderland logo, a message, and a date
 stamp on top of it. 
 
-This repo is part of an interactive Knative and serverless tutorial called the [Compile Driver](https://developers.redhat.com/compile-driver/).
+This repo is part of an interactive Knative and serverless tutorial called the [Compile Driver](https://developers.redhat.com/coderland/serverless/).
 
 The Knative serverless environment lets you deploy code to Kubernetes, but no resources are consumed unless your code needs to do something. With Knative, you create a service by packaging your code as a Docker image and handing it to the system. Your code only runs when it needs to, with Knative starting and stopping instances automatically. 
 
