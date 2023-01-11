@@ -8,5 +8,5 @@ spec:
       revisionTemplate:
         spec:
           container:
-            image: docker.io/dougtidwell/imageoverlay:v1
+            image: docker.io/rhdevelopers/imageoverlay:v1
 

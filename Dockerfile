@@ -1,6 +1,6 @@
 # Use the official maven/Java 8 image to create a build artifact.
 # https://hub.docker.com/_/maven
-FROM maven:3.5-jdk-8-alpine as builder
+FROM docker.io/maven:3.5-jdk-8-alpine as builder
 
 # Copy local code to the container image.
 WORKDIR /app
@@ -13,7 +13,7 @@ RUN mvn clean package -DskipTests
 # Use the Official OpenJDK image for a lean production stage of our multi-stage build.
 # https://hub.docker.com/_/openjdk
 # https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds
-FROM openjdk:8-jre-alpine
+FROM docker.io/openjdk:8-jre-alpine
 
 # Install some fonts
 ENV LANG en_US.UTF-8
