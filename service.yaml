@@ -1,12 +1,9 @@
-apiVersion: serving.knative.dev/v1alpha1
+apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
   name: overlayimage
 spec:
-  runLatest:
-    configuration:
-      revisionTemplate:
-        spec:
-          container:
-            image: docker.io/rhdevelopers/imageoverlay:v1
-
+  template:
+    spec:
+      containers:
+        - image: quay.io/rhdevelopers/imageoverlay:v1
