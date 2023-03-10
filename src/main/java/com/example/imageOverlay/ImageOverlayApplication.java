@@ -79,7 +79,7 @@ public class ImageOverlayApplication {
       System.out.println("OPTIONS!");
     }
 
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "http://localhost:5001")
     @PostMapping(path = "/overlayImage", consumes = "application/json", produces = "application/json")
     public Image incomingImage(@RequestBody Image image)
         throws IOException {

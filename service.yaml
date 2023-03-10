@@ -2,8 +2,12 @@ apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
   name: overlayimage
+  labels:
+    sandbox: serverless
+    sandbox-serverless: overlay
+
 spec:
   template:
     spec:
       containers:
-        - image: quay.io/rhdevelopers/imageoverlay:v1
+        - image: quay.io/rhdevelopers/imageoverlay:latest
